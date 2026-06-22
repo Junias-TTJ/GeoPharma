@@ -1,0 +1,24 @@
+<svg width="100%" viewBox="0 0 680 180" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+<title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">GeoPharma logo</title>
+<desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Logo GeoPharma : pin de localisation avec croix médicale et nom GeoPharma</desc>
+
+<!-- PIN de localisation -->
+<path d="M148 18 C126 18 108 36 108 58 C108 82 148 128 148 128 C148 128 188 82 188 58 C188 36 170 18 148 18Z" fill="#4A9B6F" style="fill:rgb(74, 155, 111);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Cercle blanc intérieur -->
+<circle cx="148" cy="56" r="22" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Croix médicale — barre horizontale -->
+<rect x="136" y="51" width="24" height="10" rx="2" fill="#4A9B6F" style="fill:rgb(74, 155, 111);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<!-- Croix médicale — barre verticale -->
+<rect x="143" y="44" width="10" height="24" rx="2" fill="#4A9B6F" style="fill:rgb(74, 155, 111);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Nom : "Geo" en noir -->
+<text x="205" y="70" font-family="'Century Gothic', 'Gill Sans', Arial, sans-serif" font-size="46" font-weight="700" fill="#1A1A1A" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Century Gothic&quot;, &quot;Gill Sans&quot;, Arial, sans-serif;font-size:46px;font-weight:700;text-anchor:start;dominant-baseline:auto">Geo</text>
+<!-- Nom : "Pharma" en vert -->
+<text x="285" y="70" font-family="'Century Gothic', 'Gill Sans', Arial, sans-serif" font-size="46" font-weight="700" fill="#4A9B6F" style="fill:rgb(74, 155, 111);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Century Gothic&quot;, &quot;Gill Sans&quot;, Arial, sans-serif;font-size:46px;font-weight:700;text-anchor:start;dominant-baseline:auto">Pharma</text>
+
+<!-- Tagline -->
+<text x="206" y="95" font-family="'Century Gothic', 'Gill Sans', Arial, sans-serif" font-size="12" font-weight="300" fill="#999999" letter-spacing="2.5" style="fill:rgb(153, 153, 153);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Century Gothic&quot;, &quot;Gill Sans&quot;, Arial, sans-serif;font-size:12px;font-weight:300;text-anchor:start;dominant-baseline:auto">VOS MÉDICAMENTS, OÙ QUE VOUS SOYEZ</text>
+
+</svg>

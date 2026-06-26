@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F4F7F6;
+  font-family: 'Poppins', sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 50px rgba(20, 30, 25, 0.08);
+  box-sizing: border-box;
+}
+
+.logoZone {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+}
+
+.appNom {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 4px 0 2px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #8A949B;
+  margin: 0;
+}
+
+.titre {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1D1E;
+  margin: 0 0 24px;
+}
+
+.champZone {
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7378;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #F1F3F5;
+  font-size: 16px;
+  font-family: inherit;
+  color: #1A1D1E;
+  box-sizing: border-box;
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+.input:focus {
+  background: #E8F5EE;
+}
+
+.input:focus-visible {
+  outline: 2px solid #3DAA6B;
+  outline-offset: 1px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputWrapper .input {
+  padding-right: 44px;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8A949B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.erreur {
+  background: #FDEDEE;
+  color: #D5444C;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 0 0 16px;
+}
+
+.bouton {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.bouton:hover {
+  background: #2F8C57;
+}
+
+.boutonDisabled {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: #B9DDC8;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: not-allowed;
+}
+
+.lienTexte {
+  text-align: center;
+  font-size: 13px;
+  color: #6B7378;
+  margin-top: 20px;
+}
+
+.lien {
+  color: #3DAA6B;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---- Responsive : tablettes / petits écrans ---- */
+@media (max-width: 480px) {
+  .page {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 32px;
+  }
+
+  .card {
+    padding: 28px 22px;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .titre {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .appNom {
+    font-size: 20px;
+  }
+
+  .input {
+    padding: 12px 14px;
+  }
+
+  .bouton,
+  .boutonDisabled {
+    padding: 13px;
+    font-size: 14px;
+  }
+}
+
+/* ---- Très petits écrans (vieux téléphones) ---- */
+@media (max-width: 340px) {
+  .card {
+    padding: 22px 16px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+}

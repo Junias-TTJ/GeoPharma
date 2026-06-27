@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  height: 100vh;
+  background: #FFFFFF;
+  border-right: 1px solid #EAECEE;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.haut {
+  padding: 24px 20px;
+}
+
+.logoZone {
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.profilZone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #EAECEE;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nomLivreur {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1D1E;
+  margin: 0 0 4px;
+}
+
+.badgeRole {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lien,
+.lienActif,
+.lienDeconnexion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.lien {
+  color: #4A5258;
+}
+
+.lien:hover {
+  background: #F4F7F6;
+}
+
+.lienActif {
+  background: #E8F5EE;
+  color: #2F8C57;
+  font-weight: 600;
+}
+
+.lienDeconnexion {
+  color: #D5444C;
+  margin-top: 12px;
+}
+
+.lienDeconnexion:hover {
+  background: #FDEDEE;
+}
+
+/* ---- Barre de navigation basse (mobile uniquement) ---- */
+.navMobile {
+  display: none;
+}
+
+/* ---- Responsive : mobile ---- */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid #EAECEE;
+  }
+
+  .haut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px;
+    width: 100%;
+  }
+
+  .nomLivreur {
+    display: none;
+  }
+
+  .logoZone {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .profilZone {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    flex-direction: row-reverse;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .navMobile {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border-top: 1px solid #EAECEE;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navMobileItem,
+  .navMobileItemActif {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 0 8px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .navMobileItem {
+    color: #8A949B;
+  }
+
+  .navMobileItemActif {
+    color: #3DAA6B;
+  }
+}

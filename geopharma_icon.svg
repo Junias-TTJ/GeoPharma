@@ -1,0 +1,14 @@
+<svg width="80" height="110" viewBox="0 0 80 110" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>GeoPharma icon</title>
+
+  <!-- PIN de localisation -->
+  <path d="M40 0 C18 0 0 18 0 40 C0 64 40 110 40 110 C40 110 80 64 80 40 C80 18 62 0 40 0Z" fill="#4A9B6F"/>
+
+  <!-- Cercle blanc intérieur -->
+  <circle cx="40" cy="38" r="22" fill="white"/>
+
+  <!-- Croix médicale — barre horizontale -->
+  <rect x="28" y="33" width="24" height="10" rx="2" fill="#4A9B6F"/>
+  <!-- Croix médicale — barre verticale -->
+  <rect x="35" y="26" width="10" height="24" rx="2" fill="#4A9B6F"/>
+</svg>

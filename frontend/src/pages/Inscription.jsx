@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { inscription } from "../api.js";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import styles from "./Connexion.module.css";
 import logo from "../../../geopharma_logo_v2.svg";
 
-const API_URL = "http://localhost/geopharma/backend";
 
 export default function Inscription() {
   const navigate = useNavigate();
@@ -28,31 +27,35 @@ export default function Inscription() {
   };
 
   const handleSubmit = async () => {
-    if (!form.nom || !form.prenom || !form.telephone || !form.mot_de_passe || !form.confirmation) {
-      setErreur("Veuillez remplir tous les champs obligatoires.");
-      return;
-    }
-    if (form.mot_de_passe !== form.confirmation) {
-      setErreur("Les mots de passe ne correspondent pas.");
-      return;
-    }
-    setChargement(true);
-    try {
-      await axios.post(`${API_URL}/routes/auth.php?action=inscription`, {
-        nom: form.nom,
-        prenom: form.prenom,
-        tel: form.telephone,
-        email: form.email,
-        mot_de_passe: form.mot_de_passe,
-        role: "PATIENT",
-      });
-      navigate("/connexion");
-    } catch (err) {
-      setErreur(err.response?.data?.erreur || "Erreur lors de l'inscription.");
-    } finally {
-      setChargement(false);
-    }
-  };
+  if (!form.nom || !form.prenom || !form.telephone || !form.mot_de_passe || !form.confirmation) {
+    setErreur("Veuillez remplir tous les champs obligatoires.");
+    return;
+  }
+  if (form.mot_de_passe.length < 8) {
+    setErreur("Le mot de passe doit contenir au moins 8 caractères.");
+    return;
+  }
+  if (form.mot_de_passe !== form.confirmation) {
+    setErreur("Les mots de passe ne correspondent pas.");
+    return;
+  }
+  setChargement(true);
+  try {
+    await inscription({
+      nom: form.nom,
+      prenom: form.prenom,
+      tel: form.telephone,
+      email: form.email || null,
+      mot_de_passe: form.mot_de_passe,
+      role: "PATIENT",
+    });
+    navigate("/connexion");
+  } catch (err) {
+    setErreur(err.response?.data?.erreur || "Erreur lors de l'inscription.");
+  } finally {
+    setChargement(false);
+  }
+};
 
   return (
     <div className={styles.page}>

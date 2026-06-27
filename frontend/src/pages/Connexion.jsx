@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { connexion } from "../api.js";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import styles from "./Connexion.module.css";
 import logo from "../../../geopharma_logo_v2.svg";
-
-const API_URL = "http://localhost/geopharma/backend";
 
 export default function Connexion() {
   const navigate = useNavigate();
@@ -19,17 +17,16 @@ export default function Connexion() {
     setErreur("");
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e?.preventDefault();
+    console.log("handleSubmit déclenché");
     if (!form.telephone || !form.mot_de_passe) {
       setErreur("Veuillez remplir tous les champs.");
       return;
     }
     setChargement(true);
     try {
-      const res = await axios.post(
-        `${API_URL}/routes/auth.php?action=connexion`,
-        form
-      );
+      const res = await connexion(form.telephone, form.mot_de_passe);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
@@ -48,7 +45,7 @@ export default function Connexion() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.card}>
+      <form className={styles.card} onSubmit={handleSubmit}>
 
         <div className={styles.logoZone}>
           <img src={logo} alt="GeoPharma" className={styles.logo} />
@@ -91,8 +88,8 @@ export default function Connexion() {
         {erreur && <p className={styles.erreur}>{erreur}</p>}
 
         <button
+          type="submit"
           className={chargement ? styles.boutonDisabled : styles.bouton}
-          onClick={handleSubmit}
           disabled={chargement}
         >
           {chargement ? "Connexion..." : "Se connecter"}
@@ -108,7 +105,7 @@ export default function Connexion() {
           </span>
         </p>
 
-      </div>
+      </form>
     </div>
   );
 }

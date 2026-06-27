@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.section {
+  margin-bottom: 32px;
+}
+
+.titreSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1D1E;
+  margin: 0 0 16px;
+}
+
+.compteur {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carte {
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  padding: 18px 20px;
+  cursor: pointer;
+  min-height: 100px;
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.carte:hover {
+  border-color: #3DAA6B;
+  box-shadow: 0 4px 14px rgba(20, 30, 25, 0.06);
+}
+
+.enTeteCarte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.nomPatient {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1D1E;
+}
+
+.badgeStatut {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.boutonDetails {
+  position: absolute;
+  bottom: 15px;
+  right: 13px;
+  background: #FFFFFF;
+  border: 1.5px solid #3DAA6B;
+  color: #3DAA6B;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 7px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonDetails:hover {
+  background: #F4FBF7;
+}
+
+
+.infosCarte {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ligneInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6B7378;
+  margin: 0;
+}
+
+/* ---- Responsive : mobile ---- */
+@media (max-width: 480px) {
+  .carte {
+    padding: 16px;
+  }
+
+  .enTeteCarte {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  background: #F4F7F6;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contenu {
+  flex: 1;
+  padding: 32px 40px;
+  box-sizing: border-box;
+  margin-left: 260px;
+}
+
+.enTete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.titre {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0 0 4px;
+}
+
+.sousTitre {
+  font-size: 14px;
+  color: #6B7378;
+  margin: 0;
+}
+
+.badgePharmacie {
+  background: #E8F5EE;
+  color: #2F8C57;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sectionActive {
+  margin-bottom: 32px;
+}
+
+.titreSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1D1E;
+  margin: 0 0 14px;
+}
+
+.puce {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3DAA6B;
+}
+
+.aucuneActive {
+  background: #F1F3F5;
+  border: 1.5px dashed #D5D9DC;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  color: #8A949B;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ---- Responsive : mobile ---- */
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .contenu {
+    margin-left: 0;
+    padding: 20px 16px 90px; /* padding-bottom pour laisser place à la navMobile fixe */
+  }
+
+  .enTete {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .titre {
+    font-size: 22px;
+  }
+
+  .badgePharmacie {
+    font-size: 12px;
+  }
+}
+
+.chargement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 16px;
+  color: #6B7378;
+  font-family: 'Poppins', sans-serif;
+}
+
+.erreurBanner {
+  background: #FDEDEE;
+  color: #D5444C;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,131 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.iconeZone {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.iconeZoneInfo {
+  background: #E8F5EE;
+  color: #3DAA6B;
+}
+
+.iconeZoneDanger {
+  background: #FDEDEE;
+  color: #D5444C;
+}
+
+.titre {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0;
+  text-align: center;
+}
+
+.message {
+  font-size: 14px;
+  color: #6B7378;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.boutonAnnuler {
+  flex: 1;
+  padding: 12px;
+  border: 1.5px solid #EAECEE;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #4A5258;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonAnnuler:hover {
+  background: #F4F7F6;
+}
+
+.boutonConfirmer {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonConfirmer:hover {
+  background: #2F8C57;
+}
+
+.boutonDanger {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background: #D5444C;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonDanger:hover {
+  background: #B83840;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 24px 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

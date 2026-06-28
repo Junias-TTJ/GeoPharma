@@ -134,10 +134,10 @@ CREATE TABLE Notification (
 
 
 INSERT INTO Utilisateur (nom, prenom, tel, email, mot_de_passe, role, statut_compte) VALUES
-('Ndiaye',  'Mary',    '772581473', 'mary.ndiaye@mail.com',  'hash_pwd_1', 'PATIENT',        'ACTIF'),
-('Diop',    'Moussa',  '770228796', 'moussa.diop@mail.com',  'hash_pwd_2', 'PHARMACIEN',     'ACTIF'),
-('Fall',    'Assane',  '774778595', 'assane.fall@mail.com',  'hash_pwd_3', 'LIVREUR',        'ACTIF'),
-('Camara',  'Khadyja', '770000000', 'admin@geopharma.sn',    'hash_pwd_4', 'ADMINISTRATEUR', 'ACTIF');
+('Ndiaye',  'Mary',    '772581473', 'mary.ndiaye@mail.com',  '$2y$10$0Qo/m/4AUZsL7kGxPjiuouBWieUlOB9zfQ/f1xeFOE0T2QOL5Qpke', 'PATIENT',        'ACTIF'),
+('Diop',    'Moussa',  '770228796', 'moussa.diop@mail.com',  '$2y$10$0Qo/m/4AUZsL7kGxPjiuouBWieUlOB9zfQ/f1xeFOE0T2QOL5Qpke', 'PHARMACIEN',     'ACTIF'),
+('Fall',    'Assane',  '774778595', 'assane.fall@mail.com',  '$2y$10$0Qo/m/4AUZsL7kGxPjiuouBWieUlOB9zfQ/f1xeFOE0T2QOL5Qpke', 'LIVREUR',        'ACTIF'),
+('Camara',  'Khadyja', '770000000', 'admin@geopharma.sn',    '$2y$10$0Qo/m/4AUZsL7kGxPjiuouBWieUlOB9zfQ/f1xeFOE0T2QOL5Qpke', 'ADMINISTRATEUR', 'ACTIF');
 
 INSERT INTO Patient (id_patient, adresse, latitude, longitude) VALUES
 (1, 'Mermoz, Dakar', 14.7167, -17.4677);

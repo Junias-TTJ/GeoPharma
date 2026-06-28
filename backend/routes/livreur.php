@@ -128,8 +128,45 @@ elseif ($method === 'GET' && $action === 'profil') {
     echo json_encode($profil);
 }
 
+// GET - Notifications du livreur (non lues + récentes)
+elseif ($method === 'GET' && $action === 'notifications') {
+    $stmt = $pdo->prepare("
+        SELECT id_notification, message, type, date_envoi, lue, id_commande
+        FROM Notification
+        WHERE id_utilisateur = ?
+        ORDER BY date_envoi DESC
+        LIMIT 20
+    ");
+    $stmt->execute([$id_livreur]);
+    $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    echo json_encode($notifications);
+}
+
+// PUT - Marquer une notification comme lue
+elseif ($method === 'PUT' && $action === 'notification-lue') {
+    $data = json_decode(file_get_contents('php://input'), true);
+    $id_notification = $data['id_notification'] ?? null;
+
+    if (!$id_notification) {
+        http_response_code(400);
+        echo json_encode(['erreur' => 'id_notification manquant']);
+        exit();
+    }
+
+    $stmt = $pdo->prepare("
+        UPDATE Notification SET lue = 1 
+        WHERE id_notification = ? AND id_utilisateur = ?
+    ");
+    $stmt->execute([$id_notification, $id_livreur]);
+
+    echo json_encode(['message' => 'Notification marquée comme lue']);
+}
+
 else {
     http_response_code(405);
     echo json_encode(['erreur' => 'Action non reconnue']);
 }
 ?>
+
+

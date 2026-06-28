@@ -55,3 +55,11 @@ export const modifierMdp = (actuel, nouveau, confirmer) =>
 
 export const supprimerCompte = () =>
   api.delete("/index.php?route=utilisateur&action=supprimer");
+
+
+// ─── NOTIFICATIONS ──────────────────────────────────────
+export const getNotifications = () =>
+  api.get("/index.php?route=livreur&action=notifications");
+
+export const marquerNotificationLue = (id_notification) =>
+  api.put("/index.php?route=livreur&action=notification-lue", { id_notification });

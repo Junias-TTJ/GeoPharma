@@ -1,0 +1,166 @@
+.conteneur {
+  position: relative;
+}
+
+.boutonCloche {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #EAECEE;
+  background: #FFFFFF;
+  color: #4A5258;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.boutonCloche:hover {
+  background: #F8F9FA;
+  border-color: #D8DCDF;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #D5444C;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 340px;
+  max-height: 420px;
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(26, 29, 30, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 50;
+  font-family: 'Poppins', sans-serif;
+}
+
+.enTeteDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #EAECEE;
+}
+
+.titreDropdown {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1D1E;
+}
+
+.compteurDropdown {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3DAA6B;
+  background: #EAF7EF;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.liste {
+  overflow-y: auto;
+  max-height: 360px;
+}
+
+.vide {
+  padding: 32px 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #6B7378;
+  margin: 0;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #F2F3F4;
+  transition: background 0.15s ease;
+  font-family: inherit;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: #F8F9FA;
+}
+
+.itemNonLue {
+  background: #F6FBF8;
+}
+
+.itemNonLue:hover {
+  background: #EAF7EF;
+}
+
+.pointNonLu {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  margin-top: 6px;
+}
+
+.itemContenu {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemMessage {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #1A1D1E;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.itemDate {
+  font-size: 12px;
+  color: #8A949B;
+  margin: 0;
+}
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 768px) {
+  .dropdown {
+    position: fixed;
+    top: 64px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+}

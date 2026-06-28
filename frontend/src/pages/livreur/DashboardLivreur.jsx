@@ -73,7 +73,6 @@ export default function DashboardLivreur() {
 
   const handleRetourFile = async () => {
     try {
-      await changerStatut(livraisonActive.id_commande, "ACCEPTEE");
       setLivraisonsEnAttente([...livraisonsEnAttente, { ...livraisonActive, statut: "ACCEPTEE" }]);
       setLivraisonActive(null);
     } catch (e) {

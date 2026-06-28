@@ -2,6 +2,7 @@ import { FiPackage, FiUser, FiLogOut } from "react-icons/fi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalConfirmation from "./ModalConfirmation.jsx";
+import Notifications from "./Notifications.jsx";
 import styles from "./Sidebar.module.css";
 import logo from "../../../../geopharma_logo_v2.svg";
 
@@ -19,8 +20,6 @@ export default function Sidebar({ livreur, pageCourante, onNaviguer}) {
     navigate("/connexion");
   };
 
-  
-
   return (
     <>
       <aside className={styles.sidebar}>
@@ -30,6 +29,7 @@ export default function Sidebar({ livreur, pageCourante, onNaviguer}) {
           </div>
 
           <div className={styles.profilZone}>
+            <Notifications />
             <div className={styles.avatar}>{initiales}</div>
             <div>
               <p className={styles.nomLivreur}>

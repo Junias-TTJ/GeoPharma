@@ -50,12 +50,6 @@ export default function ListeAttente({ livraisons = livraisonsTest, onActiver, o
                 {livraison.statut === "EN_LIVRAISON" && (
                     <span className={styles.badgeStatut}>Récupérée</span>
                 )}
-                <button
-                    className={styles.boutonDetails}
-                    onClick={(e) => { e.stopPropagation(); onVoirDetails?.(livraison.id_commande); }}
-                >
-                    Voir détails
-                </button>
             </div>
 
             <div className={styles.infosCarte}>

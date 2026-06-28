@@ -82,6 +82,7 @@
 @media (max-width: 768px) {
   .page {
     flex-direction: column;
+    padding-top: 50px;
   }
 
   .contenu {

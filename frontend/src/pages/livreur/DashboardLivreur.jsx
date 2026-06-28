@@ -5,7 +5,7 @@ import LivraisonEnCours from "./LivraisonEnCours.jsx";
 import ListeAttente from "./ListeAttente.jsx";
 import Historique from "./Historique.jsx";
 import ProfilLivreur from "./ProfilLivreur.jsx";
-import { getLivraisons, getHistorique, changerStatut } from "../../api.js";
+import { getLivraisons, getHistorique, changerStatut, getProfilLivreur } from "../../api.js";
 import styles from "./DashboardLivreur.module.css";
 
 export default function DashboardLivreur() {
@@ -21,10 +21,11 @@ export default function DashboardLivreur() {
   const [chargement, setChargement] = useState(true);
   const [erreur, setErreur] = useState(null);
 
-  // Charger les livraisons au montage
+  // Charger les livraisons, l'historique et le profil au montage
   useEffect(() => {
     chargerLivraisons();
     chargerHistorique();
+    chargerProfil();
   }, []);
 
   const chargerLivraisons = async () => {
@@ -32,8 +33,6 @@ export default function DashboardLivreur() {
       setChargement(true);
       const res = await getLivraisons();
       const data = res.data;
-
-      if (data.length > 0) setNomPharmacie(data[0].nom_pharmacie);
 
       // Séparer active (EN_LIVRAISON en premier) et en attente
       const enCours = data.find((l) => l.statut === "EN_LIVRAISON") || null;
@@ -54,6 +53,15 @@ export default function DashboardLivreur() {
       setHistorique(res.data);
     } catch (e) {
       console.error("Erreur historique:", e);
+    }
+  };
+
+  const chargerProfil = async () => {
+    try {
+      const res = await getProfilLivreur();
+      setNomPharmacie(res.data.nom_pharmacie);
+    } catch (e) {
+      console.error("Erreur profil:", e);
     }
   };
 
@@ -134,7 +142,10 @@ export default function DashboardLivreur() {
                 <p className={styles.sousTitre}>{sousTitre}</p>
               </div>
               {nomPharmacie && (
-                <span className={styles.badgePharmacie}>{nomPharmacie}</span>
+                <div className={styles.pharmacieRattachee}>
+                  <span className={styles.labelPharmacie}>Pharmacie rattachée :</span>
+                  <span className={styles.badgePharmacie}>{nomPharmacie}</span>
+                </div>
               )}
             </div>
 

@@ -123,3 +123,23 @@
   font-size: 14px;
   margin-bottom: 16px;
 }
+
+.pharmacieRattachee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.labelPharmacie {
+  font-size: 14px;
+  color: #6B7378;
+}
+
+.badgePharmacie {
+  background: #EAF7EF;
+  color: #2F8C57;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+}

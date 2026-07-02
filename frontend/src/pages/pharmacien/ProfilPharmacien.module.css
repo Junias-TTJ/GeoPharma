@@ -1,0 +1,281 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 40px 90px;
+  max-width: 860px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.enTete {
+  margin-bottom: 4px;
+}
+
+.sousTitre {
+  font-size: 14px;
+  color: #6B7378;
+  margin: 0;
+}
+
+.succesBanner {
+  background: #EAF7EF;
+  border: 1px solid #B7E4CC;
+  color: #2F8C57;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.erreurBanner {
+  background: #FFF5F5;
+  border: 1px solid #F5C6C8;
+  color: #D5444C;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+}
+
+.carteIdentite {
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nomComplet {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0 0 6px;
+}
+
+.badgeRole {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.nomPharmacie {
+  font-size: 13px;
+  color: #6B7378;
+  margin: 8px 0 0;
+}
+
+.section {
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titreSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.champMdp {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  color: #6B7378;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #EAECEE;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1A1D1E;
+  background: #F8F9FA;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #3DAA6B;
+  background: #FFFFFF;
+}
+
+.inputMdpZone {
+  position: relative;
+}
+
+.inputMdpZone .input {
+  padding-right: 44px;
+}
+
+.oeil {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8A949B;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.boutonPrimaire {
+  align-self: flex-start;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonPrimaire:hover {
+  background: #2F8C57;
+}
+
+.zoneDanger {
+  background: #FFF5F5;
+  border: 1px solid #F5C6C8;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titreDanger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #D5444C;
+  margin: 0;
+}
+
+.ligneDanger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.labelDanger {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1D1E;
+  margin: 0 0 4px;
+}
+
+.descDanger {
+  font-size: 13px;
+  color: #6B7378;
+  margin: 0;
+}
+
+.boutonSupprimer {
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border: 1.5px solid #D5444C;
+  color: #D5444C;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonSupprimer:hover {
+  background: #FDEDEE;
+}
+
+.inputErreur {
+  border-color: #D5444C;
+  background: #FFF5F5;
+}
+
+.erreur {
+  font-size: 12px;
+  color: #D5444C;
+  margin-top: 2px;
+}
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 16px 90px;
+  }
+
+  .grille {
+    grid-template-columns: 1fr;
+  }
+
+  .boutonPrimaire {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ligneDanger {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .boutonSupprimer {
+    width: 100%;
+    text-align: center;
+  }
+}

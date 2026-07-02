@@ -1,0 +1,256 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 40px 90px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chargement {
+  padding: 60px;
+  text-align: center;
+  color: #6B7378;
+  font-size: 14px;
+}
+
+.erreurBanner {
+  background: #FFF5F5;
+  border: 1px solid #F5C6C8;
+  color: #D5444C;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  margin: 24px 40px;
+}
+
+/* ---- Bandeau prochaine garde ---- */
+.bandeauGarde {
+  background: #1E6B43;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bandeauGauche {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bandeauIcone {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bandeauLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+
+.bandeauDate {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.badgeDeGarde {
+  background: #D38B3D;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.aucuneGarde {
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #8A949B;
+}
+
+/* ---- Section calendrier ---- */
+.section {
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titreSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0;
+}
+
+.puce {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.listeGardes {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ligneGarde {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #EAECEE;
+  background: #FFFFFF;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.ligneGarde:last-child {
+  margin-bottom: 0;
+}
+
+.ligneGauche {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.iconeGarde {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #EAF7EF;
+  color: #3DAA6B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dateGarde {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1D1E;
+  margin: 0 0 3px;
+  text-transform: capitalize;
+}
+
+.heureGarde {
+  font-size: 13px;
+  color: #6B7378;
+  margin: 0;
+}
+
+.badgeActive {
+  background: #EAF7EF;
+  color: #2F8C57;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badgeAVenir {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Numéro de garde ---- */
+.numeroGarde {
+  background: #FFFFFF;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.numeroIcone {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #EAF7EF;
+  color: #3DAA6B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.numeroTitre {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0 0 4px;
+}
+
+.numeroDesc {
+  font-size: 13.5px;
+  color: #6B7378;
+  margin: 0;
+}
+
+.numeroTel {
+  color: #3DAA6B;
+  font-weight: 600;
+}
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 768px) {
+  .page {
+    padding: 16px 16px 90px;
+  }
+
+  .bandeauDate {
+    font-size: 14px;
+  }
+
+  .ligneGarde {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .badgeActive,
+  .badgeAVenir {
+    align-self: flex-end;
+  }
+}

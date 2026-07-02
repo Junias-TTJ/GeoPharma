@@ -16,6 +16,7 @@ $route = $_GET['route'] ?? '';
 match($route) {
     'auth'        => require_once __DIR__ . '/routes/auth.php',
     'livreur'     => require_once __DIR__ . '/routes/livreur.php',
+    'pharmacien'  => require_once __DIR__ . '/routes/pharmacien.php',
     'utilisateur' => require_once __DIR__ . '/routes/utilisateur.php',
     default       => (function() {
         http_response_code(404);

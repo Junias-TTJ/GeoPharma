@@ -1,0 +1,97 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 40px 90px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chargement {
+  padding: 60px;
+  text-align: center;
+  color: #6B7378;
+  font-size: 14px;
+}
+
+.erreurBanner {
+  background: #FFF5F5;
+  border: 1px solid #F5C6C8;
+  color: #D5444C;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.titreSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0;
+}
+
+.compteurAttente {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compteurEnCours {
+  background: #E8F0FE;
+  color: #3B6FD9;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vide {
+  font-size: 13.5px;
+  color: #8A949B;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.grilleAttente {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.listeEnCours {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 16px 90px;
+  }
+
+  .grilleAttente {
+    grid-template-columns: 1fr;
+  }
+}

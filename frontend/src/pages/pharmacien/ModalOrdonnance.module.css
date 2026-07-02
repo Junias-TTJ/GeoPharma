@@ -1,0 +1,140 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 29, 30, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 20px;
+}
+
+.modal {
+  background: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.enTete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid #EAECEE;
+  flex-shrink: 0;
+}
+
+.titre {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boutonTelechargement {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1.5px solid #EAECEE;
+  background: #FFFFFF;
+  color: #3DAA6B;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonTelechargement:hover {
+  background: #EAF7EF;
+}
+
+.boutonFermer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #EAECEE;
+  background: #FFFFFF;
+  color: #4A5258;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boutonFermer:hover {
+  background: #F8F9FA;
+}
+
+.contenu {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.pdf {
+  width: 100%;
+  height: 65vh;
+  border: none;
+  border-radius: 8px;
+}
+
+.texte {
+  width: 100%;
+  background: #F8F9FA;
+  border: 1px solid #EAECEE;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.texte p {
+  font-size: 14px;
+  color: #1A1D1E;
+  line-height: 1.7;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 768px) {
+  .modal {
+    max-width: 100%;
+    max-height: 95vh;
+    border-radius: 16px 16px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+}

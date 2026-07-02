@@ -24,3 +24,5 @@ backend/vendor/
 
 .agents
 geopharma
+
+frontend/src/pages/admin

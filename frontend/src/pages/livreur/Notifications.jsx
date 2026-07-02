@@ -49,10 +49,10 @@ export default function Notifications() {
     return () => document.removeEventListener("mousedown", handleClicExterieur);
   }, []);
 
-  const nombreNonLues = notifications.filter((n) => !n.lue).length;
+  const nombreNonLues = notifications.filter((n) => !Number(n.lue)).length;
 
   const handleClicNotification = async (notification) => {
-    if (!notification.lue) {
+    if (!Number(notification.lue)) {
       try {
         await marquerNotificationLue(notification.id_notification);
         setNotifications((prev) =>
@@ -95,10 +95,10 @@ export default function Notifications() {
               notifications.map((notification) => (
                 <button
                   key={notification.id_notification}
-                  className={`${styles.item} ${!notification.lue ? styles.itemNonLue : ""}`}
+                  className={`${styles.item} ${!Number(notification.lue) ? styles.itemNonLue : ""}`}
                   onClick={() => handleClicNotification(notification)}
                 >
-                  {!notification.lue && <span className={styles.pointNonLu} />}
+                  {!Number(notification.lue) && <span className={styles.pointNonLu} />}
                   <div className={styles.itemContenu}>
                     <p className={styles.itemMessage}>{notification.message}</p>
                     <p className={styles.itemDate}>{formaterDate(notification.date_envoi)}</p>

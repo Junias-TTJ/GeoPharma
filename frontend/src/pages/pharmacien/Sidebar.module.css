@@ -1,0 +1,304 @@
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border-right: 1px solid #EAECEE;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.haut {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 20px;
+}
+
+.logoZone {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.profilZone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nomPharmacien {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0 0 4px;
+}
+
+/* Badge rôle — identique livreur */
+.badgeRole {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.badgesZone {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Badge pharmacie — identique livreur */
+.badgePharmacie {
+  background: #EAF7EF;
+  color: #2F8C57;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* Statuts pharmacie */
+.badgeOuverte {
+  background: #EAF7EF;
+  color: #2F8C57;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.badgeFermee {
+  background: #F1F2F3;
+  color: #5A6268;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.badgeGarde {
+  background: #FDF1E7;
+  color: #D38B3D;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.lien,
+.lienActif {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+  color: #4A5258;
+}
+
+.lien:hover {
+  background: #F8F9FA;
+}
+
+.lienActif {
+  background: #EAF7EF;
+  color: #2F8C57;
+  font-weight: 600;
+}
+
+.labelLien {
+  flex: 1;
+}
+
+.badgeNav {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #D5444C;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lienDeconnexion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #D5444C;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 12px;
+  transition: background 0.15s ease;
+}
+
+.lienDeconnexion:hover {
+  background: #FFF5F5;
+}
+
+/* ============================================
+   HEADER MOBILE (identique livreur)
+   ============================================ */
+
+.headerMobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EAECEE;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.logoMobile {
+  height: 28px;
+  width: auto;
+}
+
+.headerMobileDroite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatarMobile {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+
+.navMobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid #EAECEE;
+  z-index: 40;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.navMobileItem,
+.navMobileItemActif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: transparent;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.navMobileItem {
+  color: #8A949B;
+}
+
+.navMobileItemActif {
+  color: #3DAA6B;
+}
+
+.navMobileIconeZone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeNavMobile {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  border-radius: 999px;
+  background: #D5444C;
+  color: #FFFFFF;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .headerMobile {
+    display: flex;
+  }
+
+  .navMobile {
+    display: flex;
+  }
+}

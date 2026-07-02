@@ -1,0 +1,217 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 40px 90px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chargement {
+  padding: 60px;
+  text-align: center;
+  color: #6B7378;
+  font-size: 14px;
+}
+
+.erreurBanner {
+  background: #FFF5F5;
+  border: 1px solid #F5C6C8;
+  color: #D5444C;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  margin: 24px 40px;
+}
+
+.enTete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.titreZone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.puce {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  flex-shrink: 0;
+}
+
+.titre {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1D1E;
+  margin: 0;
+}
+
+.compteur {
+  color: #3DAA6B;
+}
+
+.boutonToutLire {
+  background: transparent;
+  border: none;
+  color: #3DAA6B;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0;
+}
+
+.boutonToutLire:hover {
+  text-decoration: underline;
+}
+
+/* ---- Liste ---- */
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #EAECEE;
+  border-radius: 16px;
+  background: #FFFFFF;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.item:hover {
+  background: #F8F9FA;
+}
+
+.itemNonLue {
+  background: #F6FBF8;
+  border-color: #C8E6D8;
+}
+
+.itemNonLue:hover {
+  background: #EAF7EF;
+}
+
+/* ---- Icônes par type ---- */
+.iconeZone {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconeCommande {
+  background: #EAF7EF;
+  color: #3DAA6B;
+}
+
+.iconeLivraison {
+  background: #EAF7EF;
+  color: #3DAA6B;
+}
+
+.iconeAnnulee {
+  background: #FFF5F5;
+  color: #D5444C;
+}
+
+.iconeGarde {
+  background: #FDF1E7;
+  color: #D38B3D;
+}
+
+.iconeDefaut {
+  background: #F1F2F3;
+  color: #5A6268;
+}
+
+/* ---- Contenu ---- */
+.contenu {
+  flex: 1;
+  min-width: 0;
+}
+
+.ligneHaut {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.labelType {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1D1E;
+}
+
+.pointNonLu {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3DAA6B;
+  flex-shrink: 0;
+}
+
+.message {
+  font-size: 13.5px;
+  color: #4A5258;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+
+.date {
+  font-size: 12px;
+  color: #8A949B;
+  margin: 0;
+}
+
+/* ---- Vide ---- */
+.vide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 20px;
+  color: #8A949B;
+  font-size: 14px;
+}
+
+.iconeVide {
+  color: #D8DCDF;
+}
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 768px) {
+  .page {
+    padding: 16px 16px 90px;
+  }
+
+  .enTete {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item {
+    padding: 14px 16px;
+  }
+}

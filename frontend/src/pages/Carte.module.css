@@ -1,0 +1,273 @@
+/* frontend/src/pages/Carte.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #F5F9F7;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 30%;
+  min-width: 340px;
+  max-width: 420px;
+  background: #FFFFFF;
+  border-right: 1px solid #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  z-index: 500;
+}
+
+.poignee {
+  display: none;
+}
+
+.sidebarContenu {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.rechercheWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #FFFFFF;
+}
+
+.rechercheWrapper:focus-within {
+  border-color: #4A9B6F;
+}
+
+.rechercheInput {
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  width: 100%;
+}
+
+.rechercheInput::placeholder {
+  color: #999999;
+}
+
+.filtres {
+  display: flex;
+  gap: 8px;
+}
+
+.filtreBtn {
+  flex: 1;
+  border: 1.5px solid #E0E0E0;
+  background: #FFFFFF;
+  color: #555555;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.filtreBtn:hover {
+  background: #E8F5EE;
+}
+
+.filtreActif {
+  background: #4A9B6F;
+  border-color: #4A9B6F;
+  color: #FFFFFF;
+}
+
+.messageGeo {
+  font-size: 13px;
+  color: #555555;
+  background: #FEF3E2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0;
+}
+
+.messageInfo {
+  font-size: 13px;
+  color: #999999;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.messageErreur {
+  font-size: 13px;
+  color: #E53935;
+  background: #FDEAEA;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0;
+}
+
+.liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carte {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  cursor: default;
+}
+
+.carteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.carteNom {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 3px 12px;
+  white-space: nowrap;
+}
+
+.carteAdresse,
+.carteHoraire {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555555;
+  margin: 4px 0;
+}
+
+.carteItineraire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1.5px solid #4A9B6F;
+  background: transparent;
+  color: #4A9B6F;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.carteItineraire:hover {
+  background: #E8F5EE;
+}
+
+.carteContainer {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.infoItineraire {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A1A1A;
+  z-index: 500;
+}
+
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .carteContainer {
+    position: absolute;
+    inset: 0;
+  }
+
+  .sidebar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    max-height: 75vh;
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease;
+    z-index: 600;
+  }
+
+  .sheetFerme {
+    transform: translateY(calc(100% - 52px));
+  }
+
+  .sheetOuvert {
+    transform: translateY(0);
+  }
+
+  .poignee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #FFFFFF;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 14px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1A1A;
+    cursor: pointer;
+  }
+
+  .sidebarContenu {
+    max-height: calc(75vh - 52px);
+  }
+}
